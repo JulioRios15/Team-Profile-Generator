@@ -46,7 +46,7 @@ const newEmployeeConfirm = {
 }
 
 const employeeType = {
-    type: "checkbox",
+    type: "list",
     name: "employeeType",
     message: "select employee type",
     choices: ['Engineer', 'Intern']

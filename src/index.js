@@ -31,7 +31,6 @@ async function init() {
     while(confirm.newEmployeeConfirm == true){
         index++;
 
-        //TODO: fix employee type choices to only one option
         const employeeType = await inquirerPrompt([questions.employeeType]);
         const internQuestions = questions.internQuestions;
         const engineerQuestions = questions.engineerQuestions;
