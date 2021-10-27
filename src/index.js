@@ -5,6 +5,7 @@ import {Intern} from './models/intern.js';
 import {Engineer} from './models/engineer.js';
 import {generateHtmlMarkdown} from './utils/markdown/html.js'
 import fs from 'fs';
+import { generateCssMarkdown } from './utils/markdown/css.js';
 
 // All emplyees data to be pushed during quierer prompts
 const roster = [];
@@ -15,8 +16,9 @@ const writeHtmlFile = (fileName, roster) => {
     fs.writeFileSync(fileName, htmlData);
 }
 
-const writeCssFile = (fileName, roster) => {
-
+const writeCssFile = (fileName) => {
+    const cssData = generateCssMarkdown();
+    fs.writeFileSync(fileName, cssData);
 }
 
 async function init() {
@@ -49,11 +51,13 @@ async function init() {
         confirm = await inquirerPrompt(questions.newEmployeeConfirm);
     }
 
+    //generate the base css file 
+    writeCssFile('./src/dist/styles.css');
+
     //generate the html file with user inquirer inputs
-     writeHtmlFile('./src/dist/index.html', getRoster());
+    writeHtmlFile('./src/dist/index.html', getRoster());
     
 
-    //console.log(roster);
 }
 
 await init()
