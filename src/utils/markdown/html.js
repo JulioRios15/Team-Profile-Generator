@@ -38,7 +38,7 @@ const generateEngineer = (engineer) => {
                 E-Mail: <a href = "mailto: ${engineer.getEmail()}">${engineer.getEmail()}</a>
             </div>      
             <div class="employee-card-content-item">
-                GitHub: ${engineer.getGithubUsername()}
+                GitHub: <a href = "https://github.com/${engineer.getGithubUsername()}" target="_blank">${engineer.getGithubUsername()}</a>
             </div>      
         </div>
     </div>
