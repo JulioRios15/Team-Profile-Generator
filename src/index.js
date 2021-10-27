@@ -3,8 +3,21 @@ import questions from './utils/inquirer/config/questions.js';
 import {Manager} from './models/manager.js';
 import {Intern} from './models/intern.js';
 import {Engineer} from './models/engineer.js';
+import {generateHtmlMarkdown} from './utils/markdown/html.js'
+import fs from 'fs';
 
+// All emplyees data to be pushed during quierer prompts
 const roster = [];
+const getRoster = () => roster;
+
+const writeHtmlFile = (fileName, roster) => {
+    const htmlData = generateHtmlMarkdown(roster);
+    fs.writeFileSync(fileName, htmlData);
+}
+
+const writeCssFile = (fileName, roster) => {
+
+}
 
 async function init() {
     let index = 1;
@@ -17,6 +30,7 @@ async function init() {
 
     while(confirm.newEmployeeConfirm == true){
         index++;
+
         //TODO: fix employee type choices to only one option
         const employeeType = await inquirerPrompt([questions.employeeType]);
         const internQuestions = questions.internQuestions;
@@ -35,8 +49,12 @@ async function init() {
 
         confirm = await inquirerPrompt(questions.newEmployeeConfirm);
     }
+
+    //generate the html file with user inquirer inputs
+     writeHtmlFile('./src/dist/index.html', getRoster());
     
-    console.log(roster);
+
+    //console.log(roster);
 }
 
 await init()
