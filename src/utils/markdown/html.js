@@ -12,7 +12,7 @@ const generateManager = (manager) => {
                 ID: ${manager.getId()}
             </div>      
             <div class="employee-card-content-item">
-                Email: ${manager.getEmail()}
+                E-Mail: <a href = "mailto: ${manager.getEmail()}">${manager.getEmail()}</a>
             </div>      
             <div class="employee-card-content-item">
                 Office Number: ${manager.getOfficeNumber()}
@@ -35,7 +35,7 @@ const generateEngineer = (engineer) => {
                 ID: ${engineer.getId()}
             </div>      
             <div class="employee-card-content-item">
-                Email: ${engineer.getEmail()}
+                E-Mail: <a href = "mailto: ${engineer.getEmail()}">${engineer.getEmail()}</a>
             </div>      
             <div class="employee-card-content-item">
                 GitHub: ${engineer.getGithubUsername()}
@@ -58,7 +58,7 @@ const generateIntern = (intern) => {
                 ID: ${intern.getId()}
             </div>      
             <div class="employee-card-content-item">
-                Email: ${intern.getEmail()}
+                E-Mail: <a href = "mailto: ${intern.getEmail()}">${intern.getEmail()}</a>
             </div>      
             <div class="employee-card-content-item">
                 School: ${intern.getSchool()}
