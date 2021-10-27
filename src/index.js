@@ -28,7 +28,7 @@ async function init() {
     
     let confirm = await inquirerPrompt(questions.newEmployeeConfirm);
 
-    while(confirm.newEmployeeConfirm == true){
+    while(confirm.newEmployeeConfirm == "Yes"){
         index++;
 
         const employeeType = await inquirerPrompt([questions.employeeType]);

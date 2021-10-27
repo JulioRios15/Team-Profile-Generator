@@ -49,7 +49,7 @@ const email = {
 }
 
 const newEmployeeConfirm = {
-    type: "confirm",
+    type: "list",
     name: "newEmployeeConfirm",
     message: "Do you want to add a new employee",
     choices: ["Yes", "No"]
