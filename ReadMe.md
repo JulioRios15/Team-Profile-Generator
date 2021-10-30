@@ -2,7 +2,7 @@
 
 ## Description
 Team Profile Generator is an node js command line application thats generates a template html & css files
-based in user inputs. Allowing the user to add a Single Manager and multiple Engineers & Interns based in the 
+based on the user inputs. Allowing the user to add a single Manager and multiple Engineers & Interns based in the 
 user desicion.
 
 ## Installation
@@ -27,7 +27,7 @@ Run the Team Profile generator
 npm run generate-team-profile
 ```
 
-## Team Profile Preview
+## Preview
 
 ### Desktop View
 
