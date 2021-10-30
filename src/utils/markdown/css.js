@@ -33,6 +33,7 @@ export const generateCssMarkdown = () => {
         display: flex;
         flex-wrap: wrap;
         justify-content:space-evenly;
+        width: 100%;
     }
     
     .employee-card{
