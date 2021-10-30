@@ -21,11 +21,20 @@ Install packages
 npm install
 ```
 
-Run the generator
+Run the Team Profile generator
 
 ```
 npm run generate-team-profile
 ```
 
-## Preview
+## Team Profile Preview
+
+### Desktop View
+
+![Desktop preview](img/Team-Profile-Desktop.PNG)
+
+### Mobile View
+
+![Mobile preview](img/Team-Profile-Mobile.PNG)
+
 
