@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "dev": "node ./src/index.js"
+    "dev": "node ./src/index.js",
+    "generate-team-profile": "node ./src/index.js"
   },
   "author": "Julio Rios",
   "license": "MIT",
